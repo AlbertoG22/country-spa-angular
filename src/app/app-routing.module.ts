@@ -6,7 +6,7 @@ import { AboutPageComponent } from './shared/pages/about-page/about-page.compone
 
 const routes: Routes = [
   {
-    path: 'home',   // OJO: sin el '/'
+    path: '',   // OJO: sin el '/'
     component: HomePageComponent
   },
   {
@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: '**', // cualquiera que no sea las anteriores
-    redirectTo: 'home'
+    redirectTo: ''
   }
 ];
 
