@@ -6,10 +6,10 @@ import { AboutPageComponent } from './shared/pages/about-page/about-page.compone
 import { ContactPageComponent } from './shared/pages/contact-page/contact-page.component';
 
 const routes: Routes = [
-  {
-    path: '',   // OJO: sin el '/'
-    component: HomePageComponent
-  },
+  // {
+  //   path: '',   // OJO: sin el '/'
+  //   component: HomePageComponent
+  // },
   {
     path: 'about',
     component: AboutPageComponent
@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: '**', // cualquiera que no sea las anteriores
-    redirectTo: ''
+    redirectTo: 'countries'
   }
 ];
 
