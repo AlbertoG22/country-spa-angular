@@ -3,6 +3,6 @@
   type="text"
   [placeholder]="placeholder"
   class="form-control"
-  (keyup.enter)="emitSearch()"
+  (keyup.enter)="emitValue( txtInput.value )"
   #txtInput
 >
