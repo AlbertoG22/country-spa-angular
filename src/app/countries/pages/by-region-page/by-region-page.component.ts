@@ -13,10 +13,13 @@ type Region = 'Africa'| 'Americas'| 'Asia'| 'Europe' | 'Oceania';
 export class ByRegionPageComponent {
   public countries: Country[] = [];
   public regions: Region[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+  public selectedRegion?: Region;
 
   constructor( private countriesService: CountriesService ) { }
 
-  searchByRegion( region: string ): void {
+  searchByRegion( region: Region ): void {
+    this.selectedRegion = region;
+
     this.countriesService.searchRegion( region )
       .subscribe( countries => {
         this.countries = countries;
